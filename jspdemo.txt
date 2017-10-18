@@ -1,0 +1,27 @@
+html+jsp，实现表单数据提交。
+
+login.html 主要代码如下：
+
+<form method="post" action="test.jsp">
+
+<input type="text" name="username" size="20" maxlength="50"><br/>
+
+<input type="password" name="pwd" size="20" maxlength="50"><br/>
+
+<input type="submit" value="提交">
+
+<input type="reset" value="重置">
+
+</form>
+
+test.jsp主要代码如下：
+
+<%
+
+String user = request.getParameter("username");
+
+String pwd = request.getParameter("pwd");
+
+out.print("用户名是："+user+"，密码是："+pwd);
+
+%>
